@@ -16,7 +16,7 @@
     --secondary-color: #DAF7A6;
 }
 
-header {
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,12 +30,45 @@ header {
     background: #ceccccdc;
 }
 
-
-header .navbar li{
-    color: rgb(118, 120, 120);
-    margin-top: 20px;
+nav .navbar{
+    height: 100vh;
 }
 
-header .navbar li a{
+nav .navbar ul{
+    justify-content: flex-start;
+    padding-left: 0;
+    height: 100%;
+    
+}
+
+nav .navbar li{
+    color: rgb(118, 120, 120);
+    margin-top: 20px;
+    
+}
+
+nav .navbar li.logout{
+    position: absolute;
+    bottom: 0;
+   
+}
+
+nav .navbar li a{
+    text-decoration: none;
     color: rgb(35, 33, 33);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding-left: 12rem;
+    width: auto;
+}
+
+.cardbox{
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    align-items: center;
 }

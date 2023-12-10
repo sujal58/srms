@@ -11,26 +11,74 @@
     <title>SRMS</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Side Navbar -->
+    <nav>
             <div class="container">
                 <div class="navbar">
-                    <li>MAIN CATEGORY</li>
-                    <li><a href=""><i class="fa-solid fa-gauge"></i>  Dashboard</a></li>
-                    <li>APPEARANCE</li>
-                    <li><a href="">Result Room</a></li>
-                    <li><a href="">Student Room</a></li>
-                    <li><a href="">Subject</a></li>
-                    <li><a href="">ClassRoom</a></li>
-                    <li><a href="">Signout</a></li>
-
+                    <h2>SRMS&nbsp;<i class="fa-solid fa-school"></i></h2>
+                    <ul>
+                        <li>MAIN CATEGORY</li>
+                        <li><a href=""><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;Dashboard</a></li>
+                        <li>APPEARANCE</li>
+                        <li><a href=""><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp;Result Room</a></li>
+                        <li><a href=""><i class="fa-solid fa-children"></i>&nbsp;&nbsp;Student Room</a></li>
+                        <li><a href=""><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Subject</a></li>
+                        <li><a href=""><i class="fa-solid fa-school"></i>&nbsp;&nbsp;ClassRoom</a></li>
+                        <li class="logout"><a href=""><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Signout</a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+    </nav>
 
     <main>
+        <!-- Header above the dashboard -->
+       
+            <div class="container">
+                <div class="dash_title">
+                    <h2 class="text-center">Welcome to Dashboard of SRMS</h2>
+                </div>
+            </div>
 
+            <!-- cards for dashboard -->
+
+            <div class="container">
+                <div class="row cardbox" style="color: white;">
+                    <div class="card" style="width: 15rem; background-color: crimson;">
+                        <div class="card-body" >
+                            <h5 class="regd-std-num">0</h5>
+                            <p class="card-text">Regd Students</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 15rem; background-color: green;">
+                        <div class="card-body">
+                            <h5 class="subject-listed-num">0</h5>
+                            <p class="card-text">Subjects Listed</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 15rem; background-color: blueviolet;">
+                        <div class="card-body">
+                            <h5 class="result-dec-num">0</h5>
+                            <p class="card-text">Result Declared</p>
+                            
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <h2>Check the result of Student</h2>
+                </div>
+                <div class="row">
+                    <input class="form-control" type="text" placeholder="Name">
+                    <input class="form-control" type="text" placeholder="semester">
+                </div>
+            </div>
+        
     </main>
     
     
