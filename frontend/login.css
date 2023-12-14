@@ -1,0 +1,13 @@
+body{
+    width: auto;
+    /* background-image: url("./assets/images/srms\ 1.jpg"); */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(1.5px);
+}
+
+.srms-text{
+    /* color: greenyellow; */
+    font-family: serif;
+   
+}
