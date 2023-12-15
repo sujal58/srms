@@ -11,33 +11,55 @@
         <title>SRMS login</title>
     </head>
     <body>
-        <div class="container" style="height: 90vh; display: grid;">
-            <div class="form-container" style="width: auto; display: flex; justify-content: center; align-items: center;">
-                <div class="row">
-                    <div class="col col-md-6 col-lg-8 col-sm-6 srms-text ml-2">
+        <div class="container text-center" style="height: 90vh; display: grid;">        
+                <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                    
+                    <div class="col col-md-6 col-lg-9 col-sm-6 srms-text ml-2">
                         <h1 >STUDENT RESULT <br> MANAGEMENT SYSTEM</h1>
                     </div>
-                    <div class="col col-md-6 col-lg-4 col-sm-6 login-form">
+                    <div class="col col-md-6 col-lg-3 col-sm-6 login-form">
                         <form action="post">
+                            <div class="admintext">
+                                <h3>Admin Login</h3>
+                            </div>
                             <div class="form-data">
                                 <div class="username">
                                     <input type="text" class="form-control" placeholder="Username">
                                 </div>
-                                <br>
+                                    <br>
                                 <div class="passwordtext">
                                     <input type="text" class="form-control" placeholder="password">
                                 </div>
-                                
+                                    
                                 <div class="btn submitbtn">
                                     <button type="submit" class="btn btn-primary">LOGIN</button>
                                 </div>
                             </div>
-                            
                         </form>
                     </div>
                 </div>
-                
-        </div>
+
+                <!-- <div class="row">
+                        <div class="col col-md-6 col-lg-12 col-sm-6 srms-text ml-2 result_check_header">
+                            <h1>CHECK YOUR RESULT</h1>
+                        </div>
+                        <div class="col result-check-input" >
+                            <form action="post" method="post" style="display: flex;">
+                                <div class="result-name">
+                                    <input type="text" class="form-method" placeholder="Name">
+                                </div>
+                                <div class="result-symbol">
+                                    <input type="text" class="form-method" placeholder="
+                                                    symbol no.">
+                                </div>
+                                <div class="result-check-btn">
+                                    <input type="button" value="Check" class="btn btn-primary">
+                                </div>
+                    
+                            </form>
+                        </div>
+                </div> -->
+            </div>
 
 
         <script src="../frontend/assets/js/bootstrap.bundle.min.js"></script>
