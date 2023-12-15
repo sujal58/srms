@@ -69,14 +69,20 @@
                 </div>  
             </div>
 
-            <div class="container">
-                <div class="row">
+            <div class="container mt-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50vh;">
+                <div class="row card-title">
                     <h2>Check the result of Student</h2>
                 </div>
-                <div class="row">
-                    <input class="form-control" type="text" placeholder="Name">
-                    <input class="form-control" type="text" placeholder="semester">
-                </div>
+                <form action="">
+                    <div class="row" style="flex-direction: column;">
+                        <input class="form-control" type="text" placeholder="Name"><br>
+                        <input class="form-control" type="text" placeholder="semester">
+                    </div><br>
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary form-control">Check</button>
+                    </div>
+                </form>
+                
             </div>
         
     </main>
