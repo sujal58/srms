@@ -20,12 +20,13 @@
                 <h2>SRMS&nbsp;<i class="fa-solid fa-school"></i></h2>
                 <ul>
                     <li>MAIN CATEGORY</li>
-                    <li><a href=""><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;Dashboard</a></li>
+                    <li><a href="./index.html"><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;Dashboard</a></li>
                     <li>APPEARANCE</li>
-                    <li><a href=""><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp;Result Room</a></li>
-                    <li><a href=""><i class="fa-solid fa-children"></i>&nbsp;&nbsp;Student Room</a></li>
-                    <li><a href=""><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Subject</a></li>
-                    <li><a href=""><i class="fa-solid fa-school"></i>&nbsp;&nbsp;ClassRoom</a></li>
+                    <li><a href="./result-gene.html"><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp;Result Room</a>
+                    </li>
+                    <li><a href="./student_room.html"><i class="fa-solid fa-children"></i>&nbsp;&nbsp;Student Room</a></li>
+                    <li><a href="./subject_list.html"><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Subject</a></li>
+                    <li><a href="./classroom.html"><i class="fa-solid fa-school"></i>&nbsp;&nbsp;ClassRoom</a></li>
                     <li class="logout"><a href=""><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Signout</a></li>
                 </ul>
             </div>
@@ -34,6 +35,12 @@
 
 
     <main>
+        <navbar style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-decoration-none"><a href="./index.html" text-decoration-none>Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Student</li>
+            </ol>
+        </navbar>
         <div class="container">
             <div class="row">
                 <div class="col col-lg-12 col-md-6 col-sm-6">
@@ -51,6 +58,7 @@
                         <div class="search-std" style="display: flex;">
                             <input type="text" class="form-control search-std-input" placeholder="Search Student">
                             <button type="submit" class="btn search-std-btn btn-warning">Search</button>
+
                         </div>
                     </form>
                     
@@ -58,7 +66,7 @@
 
                 <div class="col col-lg-6 col-md-6 col-sm-6">
                     <div class="add-std-btn">
-                        <button type="submit" class="form-control btn btn-primary">ADD STUDENT</button>
+                            <a href="./add_student.html" target="_blank"><input type="button" value="ADD STUDENT" class="form-control btn btn-primary"></a>
                     </div>
                 </div>
             </div>
