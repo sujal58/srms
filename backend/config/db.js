@@ -6,6 +6,8 @@ const sequelize = new Sequelize("srms", "root", "", {
   dialect: "mysql",
 });
 
+module.exports = sequelize;
+
 // const connection = mysql.createPool({
 //   host: "localhost",
 //   user: "root",
