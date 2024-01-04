@@ -1,27 +1,30 @@
 const db = require("../config/db.js");
-const { dataTypes, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 const User = db.define(
   "User",
   {
-    id: {
-      type: dataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-      allowNull: false,
-    },
-    name: {
+    fullname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
-      type: dataTypes.STRING,
+      type: DataTypes.STRING,
     },
-    dob: {
+    address: {
+      type: DataTypes.STRING,
+    },
+    mobileNumber: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
+    },
+    dateOfBirth: {
       type: DataTypes.DATE,
     },
-    phonenumber: {
-      type: dataTypes.INTEGER,
+    gender: {
+      type: DataTypes.ENUM("male", "female", "others"),
     },
   },
   {
@@ -29,3 +32,5 @@ const User = db.define(
     timestamps: true,
   }
 );
+
+module.exports = User;

@@ -6,16 +6,15 @@ const sequelize = require("./config/db");
 const bodyparser = require("body-parser");
 const port = process.env.PORT || 5001;
 
-app.use(bodyparser.json());
-
-//static page as a response
-const static_path = path.join(__dirname, "../frontend");
-app.use(express.static(static_path));
-
 //
 app.get("/", (req, res) => {
   res.send("Welcome to my server!!");
 });
+
+app.use(bodyparser.json());
+
+app.use("/api/students", require("./routes/studentRoute"));
+sequelize.sync();
 
 try {
   sequelize.authenticate();
@@ -26,3 +25,7 @@ try {
 } catch (error) {
   console.log("unable to connect to the database", error);
 }
+
+//static page as a response
+// const static_path = path.join(__dirname, "../frontend");
+// app.use(express.static(static_path));

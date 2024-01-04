@@ -1,8 +1,8 @@
 const mysql = require("mysql2/promise");
-const { Sequlize } = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize("srms", "root", "", {
-  host: "hostname",
+  host: "localhost",
   dialect: "mysql",
 });
 
