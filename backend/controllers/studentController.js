@@ -6,7 +6,6 @@ const User = require("../models/Users.js");
 const bcrypt = require("bcryptjs");
 
 const createStudent = async (req, res) => {
-  console.log("create");
   try {
     const existingEmail = await User.findOne({
       where: {
@@ -87,14 +86,63 @@ const getStudentById = async (req, res) => {
 };
 
 const updateStudent = async (req, res) => {
-  console.log("upfdate user");
+  const userToBeUpdated = req.params.id;
+  try {
+    const existingEmail = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
+
+    const allowedGenderValue = ["male", "female", "others"];
+    const enterGenderValue = req.body.gender;
+    if (!allowedGenderValue.includes(enterGenderValue.toLowerCase())) {
+      return res
+        .status(400)
+        .json({ message: "Invalid gender. Must be male, female or others" });
+    }
+
+    if (existingEmail) {
+      return res.status(400).json({ message: "Email already exist!!" });
+    }
+
+    const hashPassword = bcrypt.hashSync(req.body.password, 10);
+    if (!hashPassword) {
+      return res.status(500).json({ message: "Internal server error!!" });
+    }
+
+    const updatedUser = await User.update(
+      {
+        fullname: req.body.fullname,
+        email: req.body.email,
+        address: req.body.address,
+        mobileNumber: req.body.mobileNumber,
+        gender: req.body.gender,
+        dateOfBirth: req.body.dateOfBirth,
+      },
+      {
+        where: {
+          id: userToBeUpdated,
+        },
+      }
+    );
+
+    if (updatedUser) {
+      return res.status(201).json({ message: "User Updated Succesfully!!" });
+    } else {
+      return res.status(500).json({ message: "Internal Server Error!!" });
+    }
+  } catch (error) {
+    console.log("Error", error);
+    return res.status(500).json({ message: "Internal Server Error!!!" });
+  }
 };
 
 const deleteStudent = async (req, res) => {
   console.log("delete Student");
   const userToBeDeleted = req.params.id;
   try {
-    const deletedUser = await User.DELETE({ where: { id: userToBeDeleted } });
+    const deletedUser = await User.destroy({ where: { id: userToBeDeleted } });
     if (deletedUser) {
       res.status(200).json({
         message: `User having id:${userToBeDeleted} Deleted Successfully!!!`,
