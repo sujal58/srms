@@ -1,6 +1,7 @@
 //@desc create user
 //@route post /api/users
 //@access public
+const { DELETE } = require("sequelize/types/query-types.js");
 const User = require("../models/Users.js");
 const bcrypt = require("bcryptjs");
 
@@ -91,6 +92,18 @@ const updateStudent = async (req, res) => {
 
 const deleteStudent = async (req, res) => {
   console.log("delete Student");
+  const userToBeDeleted = req.params.id;
+  try {
+    const deletedUser = await User.DELETE({ where: { id: userToBeDeleted } });
+    if (deletedUser) {
+      res.status(200).json({
+        message: `User having id:${userToBeDeleted} Deleted Successfully!!!`,
+      });
+    }
+  } catch (error) {
+    console.log("Error Found!!!", error);
+    res.status(500).json({ message: "Internal server Error!!!!" });
+  }
 };
 
 module.exports = {
