@@ -1,7 +1,6 @@
 //@desc create user
 //@route post /api/users
 //@access public
-const { DELETE } = require("sequelize/types/query-types.js");
 const User = require("../models/Users.js");
 const bcrypt = require("bcryptjs");
 
@@ -86,29 +85,16 @@ const getStudentById = async (req, res) => {
 };
 
 const updateStudent = async (req, res) => {
-  const userToBeUpdated = req.params.id;
+  const userId = req.params.id;
   try {
-    const existingEmail = await User.findOne({
+    const existingUser = await User.findOne({
       where: {
-        email: req.body.email,
+        id: userId,
       },
     });
 
-    const allowedGenderValue = ["male", "female", "others"];
-    const enterGenderValue = req.body.gender;
-    if (!allowedGenderValue.includes(enterGenderValue.toLowerCase())) {
-      return res
-        .status(400)
-        .json({ message: "Invalid gender. Must be male, female or others" });
-    }
-
     if (existingEmail) {
       return res.status(400).json({ message: "Email already exist!!" });
-    }
-
-    const hashPassword = bcrypt.hashSync(req.body.password, 10);
-    if (!hashPassword) {
-      return res.status(500).json({ message: "Internal server error!!" });
     }
 
     const updatedUser = await User.update(
@@ -122,7 +108,7 @@ const updateStudent = async (req, res) => {
       },
       {
         where: {
-          id: userToBeUpdated,
+          id: userId,
         },
       }
     );
@@ -139,14 +125,21 @@ const updateStudent = async (req, res) => {
 };
 
 const deleteStudent = async (req, res) => {
-  console.log("delete Student");
   const userToBeDeleted = req.params.id;
   try {
-    const deletedUser = await User.destroy({ where: { id: userToBeDeleted } });
+    const deletedUser = await User.findOne({
+      where: {
+        id: userToBeDeleted,
+      },
+    });
+
     if (deletedUser) {
+      await deletedUser.destroy();
       res.status(200).json({
-        message: `User having id:${userToBeDeleted} Deleted Successfully!!!`,
+        message: `User having id ${userToBeDeleted} Deleted Successfully!!!`,
       });
+    } else {
+      res.status(404).json({ message: "User not found!!!!!!" });
     }
   } catch (error) {
     console.log("Error Found!!!", error);
