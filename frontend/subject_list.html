@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>SUBJECT LIST</title>
+</head>
+
+<body>
+    <!-- Side Navbar -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <h2>SRMS&nbsp;<i class="fa-solid fa-school"></i></h2>
+                <ul>
+                    <li>MAIN CATEGORY</li>
+                    <li><a href="./index.html"><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;Dashboard</a></li>
+                    <li>APPEARANCE</li>
+                    <li><a href="./result_gene.html"><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp;Result Room</a>
+                    </li>
+                    <li><a href="./student_room.html"><i class="fa-solid fa-children"></i>&nbsp;&nbsp;Student Room</a></li>
+                    <li><a href="./subject_list.html"><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Subject</a></li>
+                    <li><a href="./classroom.html"><i class="fa-solid fa-school"></i>&nbsp;&nbsp;ClassRoom</a></li>
+                    <li class="logout"><a href=""><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Signout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <navbar style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html" class="text-decoration-none">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">subject-List</li>
+            </ol>
+        </navbar>
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-12 col-md-6 col-sm-6">
+                    <div class="student-reg-heading text-center text-decoration-underline">
+                        <h1>SUBJECT LIST</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6">
+                    <form action="">
+                        <div class="search-std" style="display: flex;">
+                            <input type="text" class="form-control search-std-input" placeholder="Search Student">
+                            <button type="submit" class="btn search-std-btn btn-warning">Search</button>
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="col col-lg-6 col-md-6 col-sm-6">
+                    <div class="add-std-btn">
+                        <a href="./add_subject.html" target="_blank"><input type="button" value="ADD SUBJECT"
+                                class="form-control btn btn-primary"></a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <!-- subject list table -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-3 col-md-3 col-sm-2">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header text-success fw-bold">
+                            FIRST SEMESTER
+                        </div>
+
+                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">CSC109 &nbsp;
+                            Introduction to Information Technology</li>
+                            <li class="list-group-item">CSC110 &nbsp;C Programming</li>
+                            <li class="list-group-item">CSC111 Digital Logic</li>
+                            <li class="list-group-item">MTH 112 Mathematics I</li>
+                            <li class="list-group-item">PHY 113 Physics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col col-lg-3 col-md-3 col-sm-2">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header text-primary fw-bold">
+                            SECOND SEMESTER
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">CSC 160 Discrete Structure</li>
+                            <li class="list-group-item">CSC 161 Object Oriented Programming</li>
+                            <li class="list-group-item">CSC 162 Microprocessor</li>
+                            <li class="list-group-item">MTH 163 Mathematics II</li>
+                            <li class="list-group-item">STA 164 Statistics I</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col col-lg-3 col-md-3 col-sm-2">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header text-warning fw-bold">
+                            THIRD SEMESTER
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">CSC 206 Data Structure and Algorithm</li>
+                            <li class="list-group-item">CSC 207 Numerical Method</li>
+                            <li class="list-group-item">CSC 208 Computer Architecture</li>
+                            <li class="list-group-item">CSC 209 Computer Graphics</li>
+                            <li class="list-group-item">STA 210 Statistics II</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col col-lg-3 col-md-3 col-sm-2">
+                    <div class="card" style="width: auto;">
+                        <div class="card-header text-danger fw-bold">
+                            FOURTH SEMESTER
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">CSC 257 Theory of Computation</li>
+                            <li class="list-group-item">CSC 258 Computer Networks</li>
+                            <li class="list-group-item">CSC 259 Operating System</li>
+                            <li class="list-group-item">CSC 260 Database Management System</li>
+                            <li class="list-group-item">CSC 261 Artificial Intelligence</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+                        <div class="row">
+                            <div class="col col-lg-3 col-md-3 col-sm-2">
+                                <div class="card" style="width: auto;">
+                                    <div class="card-header fw-bold" style="color: steelblue;">
+                                        FIFTH SEMESTER
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">CSC 314 Design and Analysis of Algorithms</li>
+                                        <li class="list-group-item">CSC 315 System Analysis and Design</li>
+                                        <li class="list-group-item">CSC 316 Cryptography</li>
+                                        <li class="list-group-item">CSC 317 Simulation and Modeling</li>
+                                        <li class="list-group-item"> CSC 318 Web Technology</li>
+                                        <li class="list-group-item">Elective I</li>
+                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-3 col-md-3 col-sm-2">
+                                <div class="card" style="width: auto;">
+                                    <div class="card-header text-secondary fw-bold">
+                                        SIXTH SEMESTER
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">CSC 364 Software Engineering</li>
+                                        <li class="list-group-item">CSC 365 Compiler Design and Construction</li>
+                                        <li class="list-group-item">CSC 366 E-Governance</li>
+                                        <li class="list-group-item">CSC 367 NET Centric Computing</li>
+                                        <li class="list-group-item">CSC 368 Technical Writing</li>
+                                        <li class="list-group-item">Elective II</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-3 col-md-3 col-sm-2">
+                                <div class="card" style="width: auto;">
+                                    <div class="card-header fw-bold" style="color: chocolate;">
+                                        SEVENTH SEMESTER
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">CSC 409 Advanced Java Programming</li>
+                                        <li class="list-group-item">CSC 410 Data Warehousing and Data Mining</li>
+                                        <li class="list-group-item">CSC 411 Principles of Management</li>
+                                        <li class="list-group-item">CSC 412 Project Work</li>
+                                        <li class="list-group-item">Elective III</li>
+                                  
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-3 col-md-3 col-sm-2">
+                                <div class="card" style="width: auto;">
+                                    <div class="card-header fw-bold" style="color: blueviolet;">
+                                        EIGHTH SEMESTER
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">CSC 461 Advanced database</li>
+                                                <li class="list-group-item">CSC 462 Internship</li>
+                                                <li class="list-group-item">Elective IV</li>
+                                                <li class="list-group-item">Elective V</li>
+                                                <!-- <li class="list-group-item"></li>        -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        
+
+    </main>
+
+
+
+    <script src="../frontend/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5c6f039c5b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

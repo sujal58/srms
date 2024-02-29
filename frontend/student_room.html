@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    <title>Student Registration</title>
+</head>
+
+<body>
+    <!-- Side Navbar -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <h2>SRMS&nbsp;<i class="fa-solid fa-school"></i></h2>
+                <ul>
+                    <li>MAIN CATEGORY</li>
+                    <li><a href="./index.html"><i class="fa-solid fa-gauge"></i>&nbsp;&nbsp;Dashboard</a></li>
+                    <li>APPEARANCE</li>
+                    <li><a href="./result_gene.html"><i class="fa-solid fa-square-poll-vertical"></i>&nbsp;&nbsp;Result Room</a>
+                    </li>
+                    <li><a href="./student_room.html"><i class="fa-solid fa-children"></i>&nbsp;&nbsp;Student Room</a></li>
+                    <li><a href="./subject_list.html"><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Subject</a></li>
+                    <li><a href="./classroom.html"><i class="fa-solid fa-school"></i>&nbsp;&nbsp;ClassRoom</a></li>
+                    <li class="logout"><a href=""><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Signout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <navbar style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-decoration-none"><a href="./index.html" text-decoration-none>Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Student</li>
+            </ol>
+        </navbar>
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-12 col-md-6 col-sm-6">
+                    <div class="student-reg-heading text-center text-decoration-underline">
+                        <h1>STUDENT REGISTRATION</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6">
+                    <form action="">
+                        <div class="search-std" style="display: flex;">
+                            <input type="text" class="form-control search-std-input" placeholder="Search Student">
+                            <button type="submit" class="btn search-std-btn btn-warning">Search</button>
+
+                        </div>
+                    </form>
+                    
+                </div>
+
+                <div class="col col-lg-6 col-md-6 col-sm-6">
+                    <div class="add-std-btn">
+                            <a href="./add_student.html" target="_blank"><input type="button" value="ADD STUDENT" class="form-control btn btn-primary"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student data table -->
+        <div class="container mt-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr className="w-auto">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>E-mail</th>
+                        <th>Phone</th>
+                        <th>DOB</th>
+                        <th>Action</th>
+            
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>SUjal</td>
+                        <td>sunwal</td>
+                        <td>sujal@gmail.com</td>
+                        <td>987654331</td>
+                        <td>2001/10/31</td>
+                        <td>
+                            <button className="btn btn-danger m-1">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>SUjal</td>
+                        <td>sunwal</td>
+                        <td>sujal@gmail.com</td>
+                        <td>987654331</td>
+                        <td>2001/10/31</td>
+                        <td>
+                            <button className="btn btn-danger m-1">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        
+    </main>
+
+    
+    
+    <script src="../frontend/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5c6f039c5b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
